@@ -1,6 +1,7 @@
 class HousesController < ApplicationController
   before_action :set_house, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_admin_login
+  layout "admin_application"
   # GET /houses
   # GET /houses.json
   def index
