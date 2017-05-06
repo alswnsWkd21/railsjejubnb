@@ -54,3 +54,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 ruby "2.4.0"
 gem 'rmagick', '~> 2.16'
 gem 'carrierwave', '~> 1.0'
+source 'https://rails-assets.org' do
+gem 'rails-assets-tether', '>= 1.3.3'
+end
+gem 'bootstrap', '~> 4.0.0.alpha6'
