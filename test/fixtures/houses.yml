@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+1:
+  title: AAAA게스트하우스
+  description: 게스트하우스소개입니다.
+  address: 제주시 AA길 1
+  tel: 064-1111-1111
+
+2:
+  title: BBBB게스트하우스
+  description: 게스트하우스소개입니다.
+  address: 제주시 AA길 1
+  tel: 064-1111-1111
+
+3:
+  title: CCCC게스트하우스
+  description: 게스트하우스소개입니다.
+  address: 제주시 AA길 1
+  tel: 064-1111-1111
