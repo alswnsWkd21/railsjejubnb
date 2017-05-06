@@ -45,4 +45,7 @@ class HousesControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to houses_url
   end
+    def house_params
+      params.require(:house).permit(:title, :description, :address, :tel, {photos: []})
+    end
 end

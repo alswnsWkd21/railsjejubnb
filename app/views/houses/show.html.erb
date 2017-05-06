@@ -19,6 +19,11 @@
   <strong>Tel:</strong>
   <%= @house.tel %>
 </p>
-
+<div>
+<% @house.photos.each do | photo | %>
+  <img src="<%= photo.thumb.url %>" />
+<% end %>
+</div>   
+</div>   
 <%= link_to 'Edit', edit_house_path(@house) %> |
 <%= link_to 'Back', houses_path %>
