@@ -1,0 +1,11 @@
+<div class="row mt-5">
+  <div class="col-md-4 offset-md-4">
+    <%= form_tag("/admin_sessions/create", method: "post") do %>
+      <h2 class="form-signin-heading text-center">관리자로그인</h2>
+      <%= text_field_tag(:email,nil, class: 'form-control mt-3',  placeholder: '이메일') %>
+      <%= password_field_tag(:password,nil, class: 'form-control mt-3',  placeholder: '비밀번호') %>
+
+      <%= submit_tag("Login", class: 'btn btn-lg btn-primary btn-block  mt-3') %>
+    <% end %>
+  </div>
+</div> 
