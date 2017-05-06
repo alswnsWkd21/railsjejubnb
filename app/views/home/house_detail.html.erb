@@ -1,0 +1,30 @@
+<h3><%= @house.title %></h3>
+<% if @house.photos.present? %>
+
+  <div id="carouselPhotos" class="carousel slide mt-3" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <% @house.photos.each_with_index  do | photo, index | %>
+        <li data-target="#carouselPhotos" data-slide-to="<%= index %>" class="<%= 'active' if index == 0 %>"></li>
+      <% end %>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <% @house.photos.each_with_index  do | photo, index | %>
+      <div class="carousel-item <%= 'active' if index == 0 %>">
+        <img class="d-block img-fluid" src="<%= photo.url %>" alt="<%= @house.title %>">
+      </div>
+      <% end %>
+    </div>
+    <a class="carousel-control-prev" href="#carouselPhotos" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselPhotos" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+<% end %>
+
+<p class="mt-3"><%= @house.description %></p>
+<p>전화번호 : <%= @house.tel %></p>
+<p>주소 : <%= @house.address %></p>
